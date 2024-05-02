@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+node_modules/
+*.log
+.DS_Store
+build/
+=======
+>>>>>>> 2308b4f7c74184b75ddf307c7fa366b71d479353
+

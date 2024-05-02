@@ -1,0 +1,360 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34; /* Establece el color de fondo deseado */
+  height: 100%;
+  color: #ffffff; /* Color de texto blanco */
+}
+
+.App {
+  display: flex;
+  flex-direction: column; /* Organiza los hijos de forma vertical */
+  min-height: 100vh; /* Usa la altura de la ventana gráfica para asegurarte de que el .App llene la pantalla */
+  text-align: center;
+  background-color: transparent;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+hr {
+  border: none;
+}
+
+* {
+  margin: 0px;
+}
+
+.header {
+  margin: 0px;
+}
+
+.logo {
+  color: white;
+}
+
+.header nav {
+  background-color: #282c34;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-right: 25px;
+  padding-left: 25px;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header ul {
+  flex-basis: 75%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.header nav a:hover {
+  color: lightblue;
+}
+.header a.active {
+  color: rgb(8, 209, 58); /* El color del texto para el NavLink activo */
+}
+footer.footer {
+  margin-top: auto; /* Esto empujará el footer hacia abajo */
+  width: 100%;
+  padding: 1rem 0; /* Ajusta el padding según sea necesario */
+  background-color: #282c34; /* Color de fondo del footer, cambialo según tu diseño */
+  color: white; /* Color del texto del footer */
+  text-align: center; /* Centra el texto dentro del footer */
+  position: fixed; /* Posicionamiento fijo */
+  bottom: 0; /* Se fija en la parte inferior */
+  border: none;
+}
+#contenedor-padre-contacto {
+  background-color: #282c34; /* Fondo oscuro para todo el contenedor */
+  color: white; /* Texto en blanco */
+  min-height: 100vh; /* Asegura que el contenedor tome al menos la altura de la ventana completa */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Alinea el contenido al inicio del contenedor */
+  padding: 2rem;
+  width: 100%; /* Asegura que el contenedor use todo el ancho */
+}
+
+#form-contacto {
+  max-width: 500px; /* Ajusta según necesidades */
+  width: 100%;
+  margin: 1rem auto; /* Centra el formulario horizontalmente y da espacio superior e inferior */
+  display: flex;
+  flex-direction: column;
+}
+
+#form-contacto div,
+#form-contacto input,
+#form-contacto textarea,
+#form-contacto button {
+  box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto total */
+}
+
+#form-contacto div {
+  text-align: left; /* Alinea el texto a la izquierda dentro de los divs del formulario */
+}
+
+#form-contacto label {
+  display: block; /* Hace que las etiquetas sean bloques para alinear con los campos de texto */
+  margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
+  font-weight: bold;
+}
+
+#form-contacto input[type="text"],
+#form-contacto input[type="email"],
+#form-contacto textarea {
+  width: 100%; /* Establece el ancho al 100% para que coincida con el contenedor */
+  padding: 0.75rem; /* Relleno para hacer los campos más grandes y fáciles de leer */
+  border: 1px solid #ccc; /* Borde sutil para los campos de entrada */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #fff; /* Fondo blanco para los campos de entrada */
+  color: #333; /* Texto oscuro para contraste */
+}
+
+#form-contacto textarea {
+  height: 150px; /* Altura específica para el textarea */
+  resize: vertical; /* Permite al usuario ajustar la altura verticalmente */
+}
+
+#form-contacto button {
+  width: 100%; /* Establece el ancho al 100% para que el botón coincida con los campos de entrada */
+  padding: 0.75rem; /* Relleno para hacer el botón del mismo tamaño que los campos de entrada */
+  background-color: #61dafb; /* Color distintivo para el botón */
+  color: #282c34; /* Color de texto para el botón */
+  border: 1px solid #ccc; /* Borde sutil para el botón, como los campos de entrada */
+  border-radius: 4px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a un puntero */
+  font-size: 1rem; /* Tamaño de la fuente para el botón */
+  margin-top: 0.5rem; /* Espacio adicional antes del botón, ajusta según sea necesario */
+}
+
+#form-contacto button:hover {
+  background-color: #83e1ff; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Mensaje de error */
+#contenedor-padre-contacto p {
+  color: red; /* Color rojo para mensajes de error */
+  text-align: center;
+}
+
+/* Estilos para el mensaje de confirmación de correo enviado */
+#contenedor-padre-contacto h2 {
+  margin-top: 1rem;
+  color: #4caf50; /* Color verde para indicar éxito */
+  text-align: center;
+}
+.servicios-container {
+  background-color: #282c34;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos en el eje horizontal */
+  justify-content: flex-start; /* Alinea los elementos al inicio del eje vertical */
+  padding: 2rem;
+  width: 100%;
+}
+
+.servicio {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  width: 100%; /* Ajusta esto según la anchura deseada para cada servicio */
+  max-width: 800px; /* Ajusta esto según la anchura máxima deseada para cada servicio */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicio h2, .servicio p {
+  text-align: left;
+}
+.servicio h2 {
+  font-weight: bold;
+  color: #61dafb; /* Establece el color de los títulos h2 */
+}
+
+
+/* Asegúrate de que las clases CSS aquí coincidan con las que uses en tu componente */
+
+.proyectos-container {
+  background-color: #282c34; /* Fondo oscuro para todo el contenedor */
+  color: white; /* Texto en blanco para el contenido fuera de la tabla */
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los hijos (incluida la tabla) al centro */
+  justify-content: flex-start;
+}
+
+.proyectos-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%; /* Asegura que el encabezado ocupe el ancho completo */
+}
+
+.proyectos-header h1 {
+  margin-bottom: 1rem;
+}
+
+.proyectos-search-input {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff; /* Fondo blanco para la entrada */
+  color: #333; /* Texto oscuro para contraste */
+  margin-bottom: 1rem; /* Espacio debajo de la entrada de búsqueda */
+  width: 100%; /* Asegura que la entrada de búsqueda ocupe todo el ancho disponible */
+  max-width: 400px; /* Ancho máximo para la entrada de búsqueda */
+}
+
+.proyectos-section {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centra la tabla horizontalmente */
+}
+
+.proyectos-table {
+  border-collapse: separate; /* Separa las celdas de la tabla */
+  border-spacing: 0; /* Elimina el espacio entre las celdas */
+  width: 60%; /* Ancho de la tabla en relación al contenedor */
+  max-width: 800px; /* Ancho máximo para la tabla */
+}
+
+.proyectos-table th,
+.proyectos-table td {
+  padding: 1rem; /* Aumenta el relleno para más claridad */
+  text-align: left; /* Alineación del texto a la izquierda */
+  border-bottom: 2px solid #404850; /* Línea sutil entre filas */
+  font-size: 1rem; /* Tamaño de fuente para legibilidad */
+}
+
+.proyectos-table th {
+  font-weight: bold;
+  background-color: #3b4048; /* Fondo para los encabezados */
+  color: #61dafb; /* Color para el texto del encabezado para destacar */
+}
+
+.proyectos-table tr:nth-child(odd) {
+  background-color: #32373d; /* Color de fondo para las filas impares */
+}
+
+.proyectos-table tr:nth-child(even) {
+  background-color: #282c34; /* Color de fondo para las filas pares */
+}
+
+.proyectos-table tr:hover {
+  background-color: #3b4048; /* Color de fondo al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+  .proyectos-table {
+    width: 90%; /* Ancho de la tabla para pantallas más pequeñas */
+  }
+  .proyectos-search-input {
+    width: 90%;
+  }
+}
+.curriculum-container {
+  background-color: #282c34; /* Fondo oscuro para todo el contenedor */
+  color: white; /* Texto en blanco */
+  min-height: 100vh; /* Asegura que el contenedor tome al menos la altura de la ventana completa */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra todo el contenido en el eje horizontal */
+  justify-content: flex-start; /* Ajuste clave: comienza el contenido desde la parte superior */
+  padding: 2rem;
+  width: 100%; /* Asegura que el contenedor use todo el ancho */
+}
+
+.curriculum-content {
+  /* Contenedor para el contenido principal, asegurando alineación a la izquierda dentro del bloque */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el contenido a la izquierda */
+  max-width: 800px; /* Ancho máximo para la legibilidad */
+  width: 100%;
+  text-align: left;
+}
+
+.curriculum-list {
+  margin-top: 1rem;
+  list-style: none; /* Elimina el estilo de lista predeterminado */
+  padding: 0; /* Elimina el padding predeterminado */
+  width: 100%; /* Ancho de la lista */
+  display: flex;
+  flex-direction: column;
+}
+
+.curriculum-list li,
+.curriculum-container p,
+.curriculum-container h1,
+.curriculum-container h2 {
+  background-color: transparent; /* Fondo transparente para las entradas de la lista y párrafos */
+  color: white; /* Texto blanco para contraste */
+  padding: 0.75rem; /* Relleno para las entradas y párrafos */
+  border-radius: 4px; /* Bordes redondeados para las entradas y párrafos */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho establecido */
+  margin-bottom: 1rem; /* Espacio entre entradas */
+}
+
+.curriculum-list li:last-child,
+.curriculum-container p:last-child {
+  margin-bottom: 0; /* Elimina el margen del último elemento */
+}
+
+.curriculum-container h2 {
+  color: #61dafb; /* Color claro y distintivo para los títulos de las secciones */
+  margin: 2rem 0 1rem; /* Espaciado adecuado */
+}
