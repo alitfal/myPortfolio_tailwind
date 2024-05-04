@@ -1,3 +1,5 @@
+import "../css/styles.css";
+import "../css/tailwind.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
 
@@ -26,13 +28,12 @@ const Curriculum = () => {
   };
 
   return (
-    <div className="curriculum-container">
-      {/* Contenedor interno para centrar el contenido */}
-      <div className="curriculum-content">
-        <h1>{t("translation.titleResume")}</h1>
-        <section>
-          <h2>{t("translation.education")}</h2>
-          <ul className="curriculum-list">
+    <div className="flex flex-col flex-grow bg-gray-800 text-white p-4">
+      <div className="container mx-auto">
+        <h1 className="text-3xl font-bold mb-4 text-blue-500">{t("translation.titleResume")}</h1>
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold mb-2 text-blue-500">{t("translation.education")}</h2>
+          <ul className="list-disc list-inside">
             {curriculumInfo.education.map((edu, index) => (
               <li key={index}>
                 <strong>{t(`translation.${edu.level}`)}:</strong> {t(`translation.${edu.name}`)}, {edu.years}
@@ -40,12 +41,12 @@ const Curriculum = () => {
             ))}
           </ul>
         </section>
-        <section>
-          <h2>{t("translation.experience")}</h2>
+        <section className="mb-8">
+          <h2 className="text-xl font-semibold mb-2 text-blue-500">{t("translation.experience")}</h2>
           <p>{t(`translation.experienceDescription`)}</p>
         </section>
         <section>
-          <h2>{t("translation.personalQualities")}</h2>
+          <h2 className="text-xl font-semibold mb-2 text-blue-500">{t("translation.personalQualities")}</h2>
           <p>{t(`translation.learningAttitude`)}</p>
         </section>
       </div>

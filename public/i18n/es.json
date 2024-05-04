@@ -12,10 +12,18 @@
     "introText": "Aquí encontrarás herramientas y recursos que te ayudarán a mejorar tus habilidades y conocimientos. ¡Comienza tu viaje de aprendizaje con nosotros!",
     "titleError": "Error 404 Página no encontrada",
     "titleContact": "Contacta conmigo y hablamos",
+    
     "formName": "Tu Nombre",
     "formEmail": "Correo Electrónico",
+    "formSubject": "Asunto",
     "formMsg": "Tu Mensaje",
     "formSubmit": "Enviar",
+
+    "formNamePlaceholder": "Ingrese su nombre",
+    "formEmailPlaceholder": "Ingrese su correo electrónico",
+    "formSubjectPlaceholder": "Ingrese su asunto",
+    "formMsgPlaceholder": "Escriba su mensaje aquí",
+
     "titleResume": "Un poco de información sobre mi",
     "titleH2Resume": "Desarrollador Front End",
     "bodyResume": "Aquí va un resumen profesional.",

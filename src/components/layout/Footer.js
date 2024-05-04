@@ -1,3 +1,5 @@
+import "../../css/styles.css";
+import "../../css/tailwind.css";
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -6,20 +8,25 @@ const Footer = () => {
   const [visitCount, setVisitCount] = useState(0);
 
   useEffect(() => {
-    // Suponiendo que quieres mantener el contador de visitas entre recargas de página:
     const currentCount = parseInt(localStorage.getItem("visitCount"), 10) || 0;
     const newCount = currentCount + 1;
     localStorage.setItem("visitCount", newCount.toString());
     setVisitCount(newCount);
-  }, []); // El array vacío asegura que este efecto solo se ejecute una vez al montar el componente
+  }, []);
 
   return (
-    <footer className="footer">
-      <h1>{t("translation.titleFooter")}</h1>
-      <p>
-        {t("translation.pageVisited")} {visitCount}{" "}
-        {t("translation.timesVisited")}
-      </p>
+    <footer className="bg-gray-800 text-white p-4 shadow-lg mt-auto">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-center">
+          <a href="https://github.com/alitfal" className="mx-2" target="_blank" rel="noopener noreferrer"><i className="fab fa-github fa-2x"></i></a>
+          <a href="https://twitter.com/alitago" className="mx-2" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter fa-2x"></i></a>
+          <a href="https://linkedin.com/in/yourusername" className="mx-2" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        {/* <h1 className="text-lg">{t("translation.titleFooter")}</h1> */}
+        <p className="text-right text-sm">
+          {t("translation.pageVisited")} {visitCount} {t("translation.timesVisited")}
+        </p>
+      </div>
     </footer>
   );
 };

@@ -24,7 +24,7 @@ const MisRutas = () => {
           <Route path="/servicios" element={<Servicios />} />
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/contacto" element={<Contacto />} />
-          <Route path="/error404" element={<Error404 />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
         {/* Footer */}
         <Footer />

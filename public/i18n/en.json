@@ -12,10 +12,18 @@
     "introText": "Here you will find tools and resources that will help you improve your skills and knowledge. Start your learning journey with us!",
     "titleError": "Error 404 Page Not Found",
     "titleContact": "Contact Me and Let's Talk",
+
     "formName": "Your Name",
     "formEmail": "Email Address",
+    "formSubject": "Subject",
     "formMsg": "Your Message",
     "formSubmit": "Send",
+
+    "formNamePlaceholder": "Enter your Name",
+    "formEmailPlaceholder": "Enter your Email",
+    "formSubjectPlaceholder": "Enter your Subject",
+    "formMsgPlaceholder": "Enter your message here",
+    
     "titleResume": "A Little Bit About Me",
     "titleH2Resume": "Front End Developer",
     "bodyResume": "Here goes a professional summary.",
