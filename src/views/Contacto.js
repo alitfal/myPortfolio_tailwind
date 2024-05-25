@@ -27,7 +27,9 @@ export const Contacto = () => {
 
   return (
     <div className="flex flex-col items-center flex-grow bg-gray-800 text-white p-4">
-      <h1 className="text-3xl font-bold mb-4 text-blue-500">{t("translation.titleContact")}</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-blue-500">
+        {t("translation.titleContact")}
+      </h1>
       <div className="bg-gray-700 p-6 rounded-lg shadow-lg w-full max-w-lg">
         <form onSubmit={handleSubmit}>
           <InputField
@@ -60,7 +62,10 @@ export const Contacto = () => {
             onChange={setComentario}
             placeholder={t("translation.formMsgPlaceholder")}
           />
-          <button type="submit" className="w-full bg-blue-500 text-white px-4 py-2 rounded-md">
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300 ease-in-out"
+          >
             {t("translation.formSubmit")}
           </button>
         </form>
@@ -69,25 +74,31 @@ export const Contacto = () => {
   );
 };
 
-const InputField = React.forwardRef(({ id, label, type = "text", value, onChange, placeholder }, ref) => (
-  <div className="mb-4">
-    <label htmlFor={id} className="block">{label}</label>
-    <input
-      type={type}
-      id={id}
-      name={id}
-      ref={ref}
-      value={value}
-      onChange={(e) => onChange(e.target.value)}
-      placeholder={placeholder}
-      className="w-full bg-transparent border border-gray-500 text-white rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
-    />
-  </div>
-));
+const InputField = React.forwardRef(
+  ({ id, label, type = "text", value, onChange, placeholder }, ref) => (
+    <div className="mb-4">
+      <label htmlFor={id} className="block text-sm md:text-base lg:text-lg">
+        {label}
+      </label>
+      <input
+        type={type}
+        id={id}
+        name={id}
+        ref={ref}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        placeholder={placeholder}
+        className="w-full bg-transparent border border-gray-500 text-white rounded-md px-3 py-2 focus:outline-none focus:border-blue-500"
+      />
+    </div>
+  )
+);
 
 const TextArea = ({ id, label, value, onChange, placeholder }) => (
   <div className="mb-4">
-    <label htmlFor={id} className="block">{label}</label>
+    <label htmlFor={id} className="block text-sm md:text-base lg:text-lg">
+      {label}
+    </label>
     <textarea
       id={id}
       name={id}

@@ -1,12 +1,13 @@
 import "../../css/styles.css";
 import "../../css/tailwind.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../../constants/langs.ts";
 import { NavLink, useMatch, useResolvedPath } from "react-router-dom";
 
 const HeaderNav = () => {
   const { i18n, t } = useTranslation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const onChangeLang = (event) => {
     const newLang = event.target.value;
@@ -28,7 +29,11 @@ const HeaderNav = () => {
       <NavLink
         to={to}
         {...props}
-        className={match ? "text-green-500 hover:text-blue-300" : "hover:text-blue-300 text-white"}
+        className={
+          match
+            ? "text-green-500 hover:text-blue-300"
+            : "hover:text-blue-300 text-white"
+        }
       >
         {children}
       </NavLink>
@@ -41,27 +46,47 @@ const HeaderNav = () => {
         <img
           src="/images/logo_1_sin_fondo.png"
           alt="Logo"
-          style={{ height: '128px', width: '128' }}  // Ajusta la altura aquí en píxeles
+          className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32"
         />
-        <div className="flex items-center gap-4">
-          <ul className="flex gap-4">
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          ☰
+        </button>
+        <div
+          className={`flex-col md:flex-row md:flex items-center gap-4 ${
+            isMobileMenuOpen ? "flex" : "hidden"
+          }`}
+        >
+          <ul className="flex flex-col md:flex-row gap-4">
             <li>
-              <CustomNavLink to="/Principal">{t("translation.navHome")}</CustomNavLink>
+              <CustomNavLink to="/Principal">
+                {t("translation.navHome")}
+              </CustomNavLink>
             </li>
             <li>
-              <CustomNavLink to="/Proyectos">{t("translation.navProjects")}</CustomNavLink>
+              <CustomNavLink to="/Proyectos">
+                {t("translation.navProjects")}
+              </CustomNavLink>
             </li>
             <li>
-              <CustomNavLink to="/Curriculum">{t("translation.navResumec")}</CustomNavLink>
+              <CustomNavLink to="/Curriculum">
+                {t("translation.navResumec")}
+              </CustomNavLink>
             </li>
             <li>
-              <CustomNavLink to="/Servicios">{t("translation.navServices")}</CustomNavLink>
+              <CustomNavLink to="/Servicios">
+                {t("translation.navServices")}
+              </CustomNavLink>
             </li>
             <li>
-              <CustomNavLink to="/Contacto">{t("translation.navContact")}</CustomNavLink>
+              <CustomNavLink to="/Contacto">
+                {t("translation.navContact")}
+              </CustomNavLink>
             </li>
           </ul>
-          <div>
+          <div className="mt-4 md:mt-0">
             <label htmlFor="language-select" className="mr-2">
               {t("translation.languageSelection")}
             </label>

@@ -15,7 +15,15 @@ import bootstrap from "../images/bootstrap.png";
 const Principal = () => {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
-  const images = [claris, html_js_css, java, mysql, reactImg,tailwind,bootstrap];
+  const images = [
+    claris,
+    html_js_css,
+    java,
+    mysql,
+    reactImg,
+    tailwind,
+    bootstrap,
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,10 +46,10 @@ const Principal = () => {
   return (
     <div className="flex flex-col flex-grow bg-gray-800">
       <section className="container mx-auto p-4 text-white">
-        <h1 className="text-3xl font-bold text-blue-500 text-center mb-10">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500 text-center mb-10">
           {t("translation.introText")}
         </h1>
-        <div className="relative h-56 md:h-96 overflow-hidden rounded-lg">
+        <div className="relative h-56 md:h-96 lg:h-[32rem] overflow-hidden rounded-lg">
           {images.map((src, index) => (
             <img
               key={src}
@@ -54,14 +62,14 @@ const Principal = () => {
           ))}
           <button
             onClick={prevSlide}
-            className="absolute left-0 z-30 top-1/2 -translate-y-1/2 p-4 text-white bg-gray-800 hover:bg-gray-500 rounded-full"
+            className="absolute left-0 z-30 top-1/2 -translate-y-1/2 p-2 md:p-4 text-white bg-gray-800 hover:bg-gray-500 rounded-full transition-transform transform hover:scale-110"
             aria-label="Previous slide"
           >
             ❮
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 z-30 top-1/2 -translate-y-1/2 p-4 text-white bg-gray-800 hover:bg-gray-500 rounded-full"
+            className="absolute right-0 z-30 top-1/2 -translate-y-1/2 p-2 md:p-4 text-white bg-gray-800 hover:bg-gray-500 rounded-full transition-transform transform hover:scale-110"
             aria-label="Next slide"
           >
             ❯
