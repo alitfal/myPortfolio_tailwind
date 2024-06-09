@@ -5,6 +5,7 @@
     "navProjects": "Projects",
     "navResumec": "Resume",
     "navServices": "Services",
+    "navNews": "News",
     "navContact": "Contact",
     "languageSelection": "Language",
     "titleMain": "Main Page",
@@ -44,6 +45,8 @@
     "pageVisited": "The page has been visited ",
     "timesVisited": "times",
     "titleServices": "Services I Offer and How I Can Help You",
+    "titleNotices": "Interesting news from the DEV world",
+
     "titleFooter": "Footer",
     "education": "Education",
     "education1Level": "High School",
@@ -63,6 +66,11 @@
     "roleConsultant": "Consultant",
     "detailConsultantFilemaker": "Consultant in FileMaker development.",
     "skills": "Skills",
-    "detailSkillsJavaMysql": "I have knowledge in Java and MySQL."
+    "detailSkillsJavaMysql": "I have knowledge in Java and MySQL.",
+
+    "noticeTitleText": "Image tagging in React",
+    "noticeText": "React presents ImageAnnotator; a powerful yet lightweight React component for image annotation. It allows you to easily draw bounding boxes and polygons on images, making it ideal for computer vision applications, medical imaging, and more.",
+    "noticeReadMore": "Read More."
+
   }
 }

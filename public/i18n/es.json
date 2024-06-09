@@ -5,6 +5,7 @@
     "navProjects": "Proyectos",
     "navResumec": "Currículum",
     "navServices": "Servicios",
+    "navNews": "Noticias",
     "navContact": "Contacto",
     "languageSelection": "Idioma",
     "titleMain": "Página Principal",
@@ -44,6 +45,8 @@
     "pageVisited": "La página ha sido visitada ",
     "timesVisited": "veces",
     "titleServices": "Servicios que ofrezco y en los que te puedo ayudar",
+    "titleNotices": "Noticias interesantes del mundo DEV",
+
     "titleFooter": "Pie de página",
     "education": "Formación",
     "education1Level": "Bachillerato",
@@ -63,6 +66,14 @@
     "roleConsultant": "Consultor",
     "detailConsultantFilemaker": "Consultor en desarrollo FileMaker.",
     "skills": "Habilidades",
-    "detailSkillsJavaMysql": "Poseo conocimientos en Java y MySQL."
+    "detailSkillsJavaMysql": "Poseo conocimientos en Java y MySQL.",
+
+
+    "noticeTitleText": "Etiquetado de imágenes en React.",
+    "noticeText": "React presentamos ImageAnnotator; un componente de React potente pero liviano para la anotación de imágenes. Permite dibujar fácilmente cuadros delimitadores y polígonos en imágenes, lo que lo hace ideal para aplicaciones de visión por computadora, imágenes médicas y más.",
+    "noticeReadMore": "Leer Mas."
+
+
+
   }
 }

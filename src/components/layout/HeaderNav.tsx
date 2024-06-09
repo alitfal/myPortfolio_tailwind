@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../../constants/langs.ts";
 import { NavLink, useMatch, useResolvedPath } from "react-router-dom";
+import sonidoModificado from "../../assets/sonido_modificado.mp3"; 
 
 const HeaderNav = () => {
   const { i18n, t } = useTranslation();
@@ -43,11 +44,17 @@ const HeaderNav = () => {
   return (
     <header className="bg-gray-800 text-white p-4 shadow-lg w-full">
       <nav className="flex justify-between items-center w-full px-4 md:px-8">
-        <img
-          src="/images/logo_1_sin_fondo.png"
-          alt="Logo"
-          className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32"
-        />
+        <div className="flex flex-col items-center">
+          <img
+            src="/images/logo_1_sin_fondo.png"
+            alt="Logo"
+            className="h-16 w-16 md:h-24 md:w-24 lg:h-32 lg:w-32"
+          />
+          <audio controls className="mt-2">
+            <source src={sonidoModificado} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <button
           className="md:hidden text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -78,6 +85,11 @@ const HeaderNav = () => {
             <li>
               <CustomNavLink to="/Servicios">
                 {t("translation.navServices")}
+              </CustomNavLink>
+            </li>
+            <li>
+              <CustomNavLink to="/Noticias">
+                {t("translation.navNews")}
               </CustomNavLink>
             </li>
             <li>

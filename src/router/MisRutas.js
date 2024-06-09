@@ -4,6 +4,7 @@ import Principal from "../views/Principal";
 import Curriculum from "../views/Curriculum";
 import Proyectos from "../views/Proyectos";
 import Servicios from "../views/Servicios";
+import Noticias from "../views/Noticias";
 import Contacto from "../views/Contacto";
 import Error404 from "../views/Error404";
 import HeaderNav from "../components/layout/HeaderNav.tsx";
@@ -22,6 +23,7 @@ const MisRutas = () => {
           <Route path="/principal" element={<Principal />} />
           <Route path="/proyectos" element={<Proyectos />} />
           <Route path="/servicios" element={<Servicios />} />
+          <Route path="/noticias" element={<Noticias />} />
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="*" element={<Error404 />} />
